@@ -7,13 +7,14 @@ import com.henderson.ant.holdthefrontpage.screens.splash.splash.mvp.SplashPresen
 import com.henderson.ant.holdthefrontpage.screens.splash.splash.mvp.SplashView;
 import com.henderson.ant.holdthefrontpage.utils.utils.rx.RxSchedulers;
 
+import dagger.Module;
 import dagger.Provides;
 import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by Ant on 11/04/2017.
  */
-
+@Module
 public class SplashModule {
 
     @SplashScope

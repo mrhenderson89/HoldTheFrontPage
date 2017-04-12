@@ -1,4 +1,4 @@
-package com.henderson.ant.holdthefrontpage.screens.splash.splash.mvp;
+package com.henderson.ant.holdthefrontpage.screens.camera.mvp;
 
 import android.util.Log;
 
@@ -9,18 +9,18 @@ import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 
 /**
- * Created by Ant on 11/04/2017.
+ * Created by Ant on 12/04/2017.
  */
 
-public class SplashPresenter {
+public class CameraPresenter {
 
 
-    private SplashModel model;
+    private CameraModel model;
     private RxSchedulers rxSchedulers;
     private CompositeSubscription subscriptions;
 
 
-    public SplashPresenter(SplashModel model, RxSchedulers schedulers, CompositeSubscription subscriptions) {
+    public CameraPresenter(CameraModel model, RxSchedulers schedulers, CompositeSubscription subscriptions) {
         this.model = model;
         this.rxSchedulers = schedulers;
         this.subscriptions = subscriptions;
@@ -29,7 +29,6 @@ public class SplashPresenter {
 
     public void onCreate() {
         //subscriptions.add(getHeroesList());
-        model.gotoCameraScreenActivity();
     }
 
     public void onDestroy() {
@@ -47,6 +46,6 @@ public class SplashPresenter {
                 filter(isNetworkAvailable -> true).
                 flatMap(isAvailable -> model.isNetworkAvailable()).
                 subscribeOn(rxSchedulers.internet()).
-                observeOn(rxSchedulers.androidThread()).subscribe(aBoolean -> model.gotoCameraScreenActivity(), throwable -> UiUtils.handleThrowable(throwable));
+                observeOn(rxSchedulers.androidThread()).subscribe(aBoolean -> model.gotoHeroesListActivity(), throwable -> UiUtils.handleThrowable(throwable));
     }
 }

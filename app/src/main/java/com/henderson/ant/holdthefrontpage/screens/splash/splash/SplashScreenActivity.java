@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.henderson.ant.holdthefrontpage.CameraActivity;
-import com.henderson.ant.holdthefrontpage.R;
 import com.henderson.ant.holdthefrontpage.application.AppController;
+import com.henderson.ant.holdthefrontpage.screens.camera.CameraScreenActivity;
+import com.henderson.ant.holdthefrontpage.screens.splash.splash.dagger.DaggerSplashComponent;
 import com.henderson.ant.holdthefrontpage.screens.splash.splash.dagger.SplashContextModule;
 import com.henderson.ant.holdthefrontpage.screens.splash.splash.mvp.SplashPresenter;
 import com.henderson.ant.holdthefrontpage.screens.splash.splash.mvp.SplashView;
@@ -42,10 +42,9 @@ public class SplashScreenActivity extends AppCompatActivity {
         splashPresenter.onDestroy();
     }
 
-    public void showHeroesListActivity() {
+    public void showCameraScreenActivity() {
         Log.d("loaded", "ok showed");
-        Intent i = new Intent(this, CameraActivity.class);
+        Intent i = new Intent(this, CameraScreenActivity.class);
         startActivity(i);
     }
     }
-}

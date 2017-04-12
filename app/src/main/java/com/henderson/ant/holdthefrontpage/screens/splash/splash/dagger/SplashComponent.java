@@ -1,6 +1,6 @@
 package com.henderson.ant.holdthefrontpage.screens.splash.splash.dagger;
 
-import com.henderson.ant.holdthefrontpage.application.AppComponent;
+import com.henderson.ant.holdthefrontpage.application.builder.AppComponent;
 import com.henderson.ant.holdthefrontpage.screens.splash.splash.SplashScreenActivity;
 
 import dagger.Component;

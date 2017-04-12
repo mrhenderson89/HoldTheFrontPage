@@ -2,6 +2,7 @@ package com.henderson.ant.holdthefrontpage.screens.splash.splash.mvp;
 
 import com.henderson.ant.holdthefrontpage.api.HTFPapi;
 import com.henderson.ant.holdthefrontpage.screens.splash.splash.SplashScreenActivity;
+import com.henderson.ant.holdthefrontpage.utils.utils.NetworkUtils;
 
 import rx.Observable;
 
@@ -28,8 +29,12 @@ public class SplashModel {
     }
 
 
-    public void gotoHeroesListActivity() {
-        splashContext.showHeroesListActivity();
+//    public void gotoHeroesListActivity() {
+//        //splashContext.showHeroesListActivity();
+//
+//    }
+    public void gotoCameraScreenActivity() {
+        splashContext.showCameraScreenActivity();
 
     }
 

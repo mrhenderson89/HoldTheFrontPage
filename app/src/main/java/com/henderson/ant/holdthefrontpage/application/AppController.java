@@ -3,6 +3,9 @@ package com.henderson.ant.holdthefrontpage.application;
 import android.app.Application;
 
 import com.henderson.ant.holdthefrontpage.api.HTFPapi;
+import com.henderson.ant.holdthefrontpage.application.builder.AppComponent;
+import com.henderson.ant.holdthefrontpage.application.builder.AppContextModule;
+import com.henderson.ant.holdthefrontpage.application.builder.DaggerAppComponent;
 
 import dagger.Component;
 import timber.log.BuildConfig;

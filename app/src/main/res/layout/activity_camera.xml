@@ -6,11 +6,10 @@
     android:orientation="vertical"
     tools:context=".CameraActivity">
     <TextureView
-        android:id="@+id/texture"
+        android:id="@+id/cameraTexture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_takepicture"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentBottom="true" />
     <Button
         android:id="@+id/btn_takepicture"
         android:layout_width="wrap_content"
